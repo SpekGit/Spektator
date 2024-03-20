@@ -1,6 +1,41 @@
 <html>
 
-<head></head>
+<head>
+<script>
+(function ()
+{
+      var noop = function noop()
+      {
+      }
+      if ("performance" in window === false)
+      {
+            window.performance =
+            {
+            }
+            
+      }
+      window.performance.mark = performance.mark || noop;
+      window.performance.measure = performance.measure || noop;
+      if ("now" in window.performance === false)
+      {
+            var nowOffset = Date.now();
+            if (performance.timing && performance.timing.navigationStart)
+            {
+                  nowOffset = performance.timing.navigationStart;
+                  
+            }
+            window.performance.now = function now()
+            {
+                  return Date.now() - nowOffset;
+                  
+            }
+            
+      }
+      
+}
+)();
+</script>    
+</head>
 
 <body data-new-gr-c-s-check-loaded="14.1162.0" data-gr-ext-installed="" style="cursor: auto;overflow: auto scroll;height:739px;--scrollbar-width: 0px;font-family:Arial, Helvetica, sans-serif;font-size:10px;background:rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box;border:0px none rgb(0, 0, 0);margin:0px;outline:rgb(0, 0, 0) none 0px;padding:0px;vertical-align:baseline;">
     <!--pageHtmlEmbeds.bodyStart start-->
