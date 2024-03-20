@@ -21,3 +21,7 @@
         padding: 0px;
         vertical-align: baseline;
     }
+.navbar {
+            overflow: hidden;
+            background-color: #333;
+        }
