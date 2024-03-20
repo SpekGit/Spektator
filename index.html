@@ -34,7 +34,23 @@
       
 }
 )();
-</script>    
+</script> 
+      <script>
+(function ()
+{
+      var now = Date.now()
+      window.initialTimestamps =
+      {
+            initialTimestamp: now,
+            initialRequestTimestamp: Math.round(performance.timeOrigin ? performance.timeOrigin : now - performance.now())
+            
+      }
+      window.thunderboltTag = "libs-releases-GA-local"
+      window.thunderboltVersion = "1.13753.0"
+      
+}
+)();
+</script>
 </head>
 
 <body data-new-gr-c-s-check-loaded="14.1162.0" data-gr-ext-installed="" style="cursor: auto;overflow: auto scroll;height:739px;--scrollbar-width: 0px;font-family:Arial, Helvetica, sans-serif;font-size:10px;background:rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box;border:0px none rgb(0, 0, 0);margin:0px;outline:rgb(0, 0, 0) none 0px;padding:0px;vertical-align:baseline;">
