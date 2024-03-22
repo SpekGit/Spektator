@@ -153,5 +153,11 @@ body, html {
     color: white;
 }
 
+.empty-block{
+    width: 100%;
+    height: 800px;
+    background-image: linear-gradient(rgb(30, 48, 61) 0%, rgb(65, 65, 65) 100%);
+}
+
 
 
