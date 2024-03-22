@@ -15,16 +15,20 @@ body, html {
     align-items: center;
     text-align: center;
     color: #000000;
+    background-image: radial-gradient(circle at 94.35384114583333% 89.61588541666666%, #83A8F0 0%, 20%, rgba(131,168,240,0) 40%), radial-gradient(circle at 6.503906249999999% 88.037109375%, rgba(200,238,245,0.99) 0%, 25%, rgba(200,238,245,0) 50%), radial-gradient(circle at 6.165364583333333% 12.617187499999998%, #155DE9 0%, 42%, rgba(21,93,233,0) 70%), radial-gradient(circle at 93.6865234375% 11.42578125%, #E3E3E3 0%, 42%, rgba(227,227,227,0) 70%), radial-gradient(circle at 48.9013671875% 49.521484375%, #F6F6F6 0%, 100%, rgba(246,246,246,0) 100%);;
 }
 
 .bg h1 {
     margin: 0;
     font-size: 3em;
+    color: rgb(246, 246, 246);
 }
 
 .bg p {
     margin: 20px 0;
     font-size: 1.5em;
+    color: rgb(246, 246, 246);
+
 }
 
 .navbar {
