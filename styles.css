@@ -68,3 +68,66 @@ body, html {
 .navigation a:hover {
     text-decoration: underline;
 }
+
+
+.content {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f2f2f2;
+    background-image: linear-gradient(180deg, #155DE9 0%, #1E303D 100%);;
+    padding: 0 400px;
+}
+
+.content .header h1 {
+    color: #000066;
+    font-size: 2em;
+}
+
+.content .header h2 {
+    color: #000066;
+    font-weight: normal;
+}
+
+.content .header p,
+.content .laws p {
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.content .question p {
+    background-color: #e6e6ff;
+    padding: 10px;
+    border-left: 3px solid #000066;
+}
+
+.content .laws .law h3 {
+    font-size: 1em;
+    color: #000066;
+}
+
+.content .laws .law p {
+    font-size: 0.9em;
+    margin-left: 20p    x;
+}
+
+.content .footer {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.content .footer p {
+    font-size: 0.8em;
+}
+
+.spektator-logo,
+.aba-logo {
+    height: 40px; /* Adjust the size as needed */
+    width: auto;
+    margin: 5px;
+}
+
+.laws{
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    padding: 20px;
+}
