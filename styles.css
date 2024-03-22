@@ -76,28 +76,30 @@ body, html {
     background-color: #f2f2f2;
     background-image: linear-gradient(180deg, #155DE9 0%, #1E303D 100%);;
     padding: 0 400px;
+    align-content: center;
 }
 
 .content .header h1 {
-    color: #000066;
+    color: white;
     font-size: 2em;
 }
 
 .content .header h2 {
-    color: #000066;
+    color: white;
     font-weight: normal;
 }
 
 .content .header p,
 .content .laws p {
     font-size: 0.9em;
-    line-height: 1.4;
+    line-height: 1;
 }
 
 .content .question p {
     background-color: #e6e6ff;
     padding: 10px;
     border-left: 3px solid #000066;
+    border-radius: 20px;
 }
 
 .content .laws .law h3 {
@@ -107,7 +109,7 @@ body, html {
 
 .content .laws .law p {
     font-size: 0.9em;
-    margin-left: 20p    x;
+    margin-left: 20px;
 }
 
 .content .footer {
@@ -126,8 +128,21 @@ body, html {
     margin: 5px;
 }
 
-.laws{
+.centred{
+    max-width: 500px;
+    margin: 0 300px;
+}
+
+.content .laws{
     background-color: rgb(255, 255, 255);
     border-radius: 30px;
     padding: 20px;
 }
+
+.content .header p{
+    font-size: 1.5em;
+    color: white;
+}
+
+
+
