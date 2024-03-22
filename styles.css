@@ -1,39 +1,28 @@
-.style-0 {
-        color: #FFFFFF;
-        background: rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box;
-        border: 0px none rgb(255, 255, 255);
-        margin: 0px;
-        outline: rgb(255, 255, 255) none 0px;
-        padding: 0px;
-        vertical-align: baseline;
-    }
-.style-1 {
-        background-color: rgb(255, 255, 255);
-        background-image: none;
-        transition: all 0s ease 0s;
-        height: 61.3984px;
-        position: absolute;
-        top: 0px;
-        width: 100%;
-        border: 0px none rgb(0, 0, 0);
-        margin: 0px;
-        outline: rgb(0, 0, 0) none 0px;
-        padding: 0px;
-        vertical-align: baseline;
-    }
-.navbar {
-            overflow: hidden;
-            background-color: #333;
-        }
-.navbar a {
-            float: left;
-            display: block;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px 20px;
-            text-decoration: none;
-        }
-.navbar a:hover {
-            background-color: #ddd;
-            color: black;
-        }
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.bg {
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+}
+
+.bg h1 {
+    margin: 0;
+    font-size: 3em;
+}
+
+.bg p {
+    margin: 20px 0;
+    font-size: 1.5em;
+}

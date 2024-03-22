@@ -1,81 +1,18 @@
 <html>
 
 <head>
-<script>
-(function ()
-{
-      var noop = function noop()
-      {
-      }
-      if ("performance" in window === false)
-      {
-            window.performance =
-            {
-            }
-            
-      }
-      window.performance.mark = performance.mark || noop;
-      window.performance.measure = performance.measure || noop;
-      if ("now" in window.performance === false)
-      {
-            var nowOffset = Date.now();
-            if (performance.timing && performance.timing.navigationStart)
-            {
-                  nowOffset = performance.timing.navigationStart;
-                  
-            }
-            window.performance.now = function now()
-            {
-                  return Date.now() - nowOffset;
-                  
-            }
-            
-      }
-      
-}
-)();
-</script> 
-      <script>
-(function ()
-{
-      var now = Date.now()
-      window.initialTimestamps =
-      {
-            initialTimestamp: now,
-            initialRequestTimestamp: Math.round(performance.timeOrigin ? performance.timeOrigin : now - performance.now())
-            
-      }
-      window.thunderboltTag = "libs-releases-GA-local"
-      window.thunderboltVersion = "1.13753.0"
-      
-}
-)();
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Spektator Project</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
-<body data-new-gr-c-s-check-loaded="14.1162.0" data-gr-ext-installed="" style="cursor: auto;overflow: auto scroll;height:739px;--scrollbar-width: 0px;font-family:Arial, Helvetica, sans-serif;font-size:10px;background:rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box;border:0px none rgb(0, 0, 0);margin:0px;outline:rgb(0, 0, 0) none 0px;padding:0px;vertical-align:baseline;">
-    <!--pageHtmlEmbeds.bodyStart start-->
-    <!--pageHtmlEmbeds.bodyStart end-->
-    <pages-css> </pages-css> <!-- initCustomElements # 1-->
-<div data-testid="colorUnderlay" class="style-0"></div>
-      <div class="navbar">
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Contact</a>
+<body>
+<div class="bg">
+    <h1>Welcome to the Spektator Project</h1>
+    <p>An AI-powered privacy law database for American Bar Association Members</p>
+    <p>Scroll down bottom to see our project concept design and more information</p>
 </div>
-
-<div class="container">
-    <h2>About Us</h2>
-    <p>SPEKTATOR - Privacy Law at your fingertips</p>
-    
-    <div class="cta">
-        <button>Learn More</button>
-    </div>
-</div>
-<footer>
-    <p>&copy; 2024 SPEKTAL. All Rights Reserved.</p>
-</footer>
 </body>
 
 </html>
