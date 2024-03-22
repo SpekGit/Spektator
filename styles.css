@@ -159,5 +159,27 @@ body, html {
     background-image: linear-gradient(rgb(30, 48, 61) 0%, rgb(65, 65, 65) 100%);
 }
 
+.navbar-bottom {
+    display: flex;
+    justify-content: space-around;
+    background-image: linear-gradient(rgb(65, 65, 65) 0%, #a2459a 100%);
+    padding: 35px 0;
+    color: white;
+    font-family: Arial, sans-serif;
+}
 
+.nav-link {
+
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Add hover effect for links */
+.nav-link:hover {
+    text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.7);
+}
 
