@@ -268,3 +268,11 @@ body, html {
 .centred p{
     opacity: 0;
 }
+
+.centred-h3-anim{
+    animation: left-slide-in 1.5s ease-in-out forwards;
+}
+
+.centred h3{
+    opacity: 0;
+}
