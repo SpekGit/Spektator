@@ -215,5 +215,5 @@ body, html {
 }
 
 .navbar-ani {
-    animation: navbar-ani 2s ease-in-out forwards;
+    animation: navbar-ani 1s ease-in-out forwards;
 }

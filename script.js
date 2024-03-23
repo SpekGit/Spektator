@@ -24,8 +24,10 @@ function runAnimation() {
             break;
         case 1:
             elements = document.querySelectorAll('.navbar .navigation a');
-            elements.forEach(function(el) {
-                el.classList.add('navbar-ani');
+            elements.forEach(function(el, index) {
+                setTimeout(function() {
+                    el.classList.add('navbar-ani');
+                }, index * 500); // 500ms interval between each iteration
             });
             document.addEventListener('animationend', function(e) {
                 animorder = 2;
