@@ -50,6 +50,19 @@ function runAnimation() {
                 runAnimation();
             }, {once: true});
             break;
+        case 3:
+            elements = document.querySelectorAll('.centred p');
+            elements.forEach(function(el, index) {
+                setTimeout(function() {
+                    el.classList.add('question-anim');
+                }, index * 500);
+            });
+            document.addEventListener('animationend', function(e) {
+                animorder = 4;
+                console.log(animorder);
+                runAnimation();
+            }, {once: true});
+            break;
         default:
             console.log('Animation completed');
             break;
