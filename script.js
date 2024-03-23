@@ -35,6 +35,21 @@ function runAnimation() {
                 runAnimation();
             }, {once: true});
             break;
+        case 2:
+            let coin = false;
+            elements = document.querySelectorAll('.content .header h1, .content .header h2, .content .header p');
+            elements.forEach(function(el, index) {
+                setTimeout(function() {
+                    el.classList.add(coin ? 'header-ani-right' : 'header-ani-left');
+                    coin = !coin;
+                }, index * 500);
+            });
+            document.addEventListener('animationend', function(e) {
+                animorder = 3;
+                console.log(animorder);
+                runAnimation();
+            }, {once: true});
+            break;
         default:
             console.log('Animation completed');
             break;

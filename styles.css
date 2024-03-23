@@ -103,6 +103,10 @@ body, html {
     text-shadow: #ffffff 0px 0px 2px;
 }
 
+.content .header p{
+    opacity: 0;
+}
+
 .content .header p,
 .content .laws p {
     font-size: 0.9em;
