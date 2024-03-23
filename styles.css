@@ -195,3 +195,12 @@ body, html {
 .fade-in {
     animation: fadeIn 2s ease-in-out;
 }
+
+@keyframes slideIn {
+    from { transform: translateX(-20px); }
+    to { transform: translateX(0); }
+}
+
+.slide-in {
+    animation: slideIn 1s ease-out forwards;
+}
