@@ -4,11 +4,12 @@ document.addEventListener('DOMContentLoaded', function() {
     runAnimation();
 });
 
+let elements;
 
 function runAnimation() {
     switch (animorder) {
         case 0:
-            let elements = document.querySelectorAll('.bg h1, .bg p');
+            elements = document.querySelectorAll('.bg h1, .bg p');
             elements.forEach(function(el) {
                 el.classList.add('bg-ani');
             });
@@ -17,6 +18,17 @@ function runAnimation() {
                     e.target.classList.remove('bg-ani');
                 }
                 animorder = 1;
+                console.log(animorder);
+                runAnimation();
+            }, {once: true});
+            break;
+        case 1:
+            elements = document.querySelectorAll('.navbar .navigation a');
+            elements.forEach(function(el) {
+                el.classList.add('navbar-ani');
+            });
+            document.addEventListener('animationend', function(e) {
+                animorder = 2;
                 console.log(animorder);
                 runAnimation();
             }, {once: true});

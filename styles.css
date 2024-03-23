@@ -67,6 +67,7 @@ body, html {
     color: white;
     margin: 0 10px;
     font-size: 16px;
+    opacity: 0;
 }
 
 .navigation a:hover {
@@ -202,7 +203,7 @@ body, html {
     animation: bg-ani 2s ease-in-out forwards;
 }
 
-@keyframes nav-ani {
+@keyframes navbar-ani {
     from {
         opacity: 0;
         transform: translateY(-100px);
@@ -211,4 +212,8 @@ body, html {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.navbar-ani {
+    animation: navbar-ani 2s ease-in-out forwards;
 }
