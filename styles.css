@@ -112,12 +112,15 @@ body, html {
     font-size: 0.9em;
     line-height: 1;
 }
-
-.content .question p {
+.content .question {
     background-color: #e6e6ff;
-    padding: 10px;
+    margin: 10px;
     border-left: 3px solid #000066;
     border-radius: 20px;
+}
+
+.content .question p {
+    padding: 10px;
 }
 
 .content .laws .law h3 {
