@@ -187,20 +187,17 @@ body, html {
     text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.7);
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+@keyframes bg-ani {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
-.fade-in {
-    animation: fadeIn 2s ease-in-out;
-}
-
-@keyframes slideIn {
-    from { transform: translateX(-20px); }
-    to { transform: translateX(0); }
-}
-
-.slide-in {
-    animation: slideIn 1s ease-out forwards;
+.bg-ani {
+    animation: bg-ani 2s ease-in-out forwards;
 }
