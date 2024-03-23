@@ -249,3 +249,22 @@ body, html {
 .header-ani-left {
     animation: left-slide-in 2s ease-in-out forwards;
 }
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.question-anim{
+    animation: zoomIn 2s ease-in-out forwards;
+}
+
+.centred p{
+    opacity: 0;
+}
