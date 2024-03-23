@@ -63,6 +63,19 @@ function runAnimation() {
                 runAnimation();
             }, {once: true});
             break;
+        case 4:
+            elements = document.querySelectorAll('.centred h3');
+            elements.forEach(function(el, index) {
+                setTimeout(function() {
+                    el.classList.add('centred-h3-anim');
+                }, index * 500);
+            });
+            document.addEventListener('animationend', function(e) {
+                animorder = 5;
+                console.log(animorder);
+                runAnimation();
+            }, {once: true});
+            break;
         default:
             console.log('Animation completed');
             break;
