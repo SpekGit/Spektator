@@ -81,3 +81,21 @@ function runAnimation() {
             break;
     }
 }
+
+
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+
+    // Basic validation criteria
+    if (username === '' || password === '') {
+        alert('Both username and password are required.');
+        event.preventDefault(); // Prevent form submission
+    } else if (password.length < 3) {
+        alert('Password must be at least 3 characters long.');
+        event.preventDefault(); // Prevent form submission
+    } else if (username === 'admin' && password === 'admin') {
+        alert('Login successful!');
+        event.preventDefault(); // Prevent form submission
+    }
+});
