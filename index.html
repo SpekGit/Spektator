@@ -9,15 +9,16 @@
 
 <body>
 <div class="bg">
-    <h1>Welcome to the Spektator Project</h1>
-    <p>An AI-powered privacy law database for American Bar Association Members</p>
-    <p>Scroll down bottom to see our project concept design and more information</p>
+        <h1>Welcome to the Spektator Project</h1>
+        <p>An AI-powered privacy law database for American Bar Association Members</p>
+        <p>Scroll down bottom to see our project concept design and more information</p>
 </div>
 <div class="navbar">
     <div class="combined-logo" >
         <img src="logo.png" alt="ABA Logo" class="logo">
         <img src="logo1.png" alt="AmericanBarAssociation" class="logo">
     </div>
+
     <nav class="navigation">
         <a href="#">Events</a>
         <a href="#">CLE</a>
@@ -93,13 +94,27 @@
 
         </div>
     </div>
+
+
+
     <div class="footer">
         <p>created in collaboration between</p>
         <img src="spektator-logo.png" alt="Spektator Logo" class="spektator-logo">
         <img src="aba-logo.png" alt="ABA Logo" class="aba-logo">
     </div>
 </div>
-<div class="empty-block"></div>
+<div class="empty-block">
+    <div class="login">
+        <h2>Login</h2>
+        <form action="/login" method="post">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username"><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password"><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</div>
 <div class="navbar-bottom">
     <a href="#" class="nav-link">Contribute</a>
     <a href="#" class="nav-link">Learn More</a>
