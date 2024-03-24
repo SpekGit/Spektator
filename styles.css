@@ -153,10 +153,6 @@ body, html {
     margin: 5px;
 }
 
-.centred{
-    max-width: 500px;
-    margin: 0 300px;
-}
 
 .content .laws{
     background-color: rgb(255, 255, 255);
@@ -286,7 +282,6 @@ body, html {
 
 
 .container{
-    display: flex;
     justify-content: center;
     align-items: center;
     max-width: 1000px;
