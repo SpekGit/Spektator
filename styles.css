@@ -342,3 +342,12 @@ body, html {
     justify-content: center;
     max-width: 500px;
 }
+
+#savedSearches {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
