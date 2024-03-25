@@ -267,7 +267,7 @@ body, html {
     animation: zoomIn 2s ease-in-out forwards;
 }
 
-.centred p{
+.FAQ p{
     opacity: 0;
 }
 
@@ -275,7 +275,7 @@ body, html {
     animation: left-slide-in 1.5s ease-in-out forwards;
 }
 
-.centred h3{
+.FAQ h3{
     opacity: 0;
 }
 
@@ -335,7 +335,7 @@ body, html {
     cursor: pointer;
 }
 
-.faq{
+.FAQ{
     display: flex;
     flex-direction: column;
     align-items: center;
