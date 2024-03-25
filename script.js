@@ -117,4 +117,19 @@ function setupObservers() {
     document.querySelectorAll('.bg h1, .bg p').forEach(el => {
         bgObserver.observe(el);
     });
+
+    let navbarObserver = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                entry.target.classList.add('navbar-ani');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, options);
+
+    document.querySelectorAll('.navbar .navigation a').forEach(el => {
+        navbarObserver.observe(el);
+    });
+
+    
 }
