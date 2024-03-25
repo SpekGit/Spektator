@@ -285,8 +285,8 @@ body, html {
     flex-direction: inherit;
     justify-content: center;
     align-items: center;
-    max-width: 1000px;
-
+    max-width: 1200px;
+    width: 100%;
     @media (max-width: 768px) {
         max-width: 500px;
     }
@@ -350,4 +350,14 @@ body, html {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.top-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #003366;
+    color: white;
+    padding: 10px 20px;
+    width: 100%;
 }
