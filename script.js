@@ -166,4 +166,16 @@ function setupObservers() {
         questionObserver.observe(el);
     });
 
+    let centredH3Observer = new IntersectionObserver(function(entries, observer) {
+        entries.forEach((entry, index) => {
+            setTimeout(function() {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('centred-h3-anim');
+                    observer.unobserve(entry.target);
+                }
+            }, index * 500);
+        });
+    }, options);
+
+
 }
