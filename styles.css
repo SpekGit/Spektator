@@ -40,7 +40,7 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #003366; /* Adjust the color to match the exact color of the header */
+    background-color: var(--primary-color); /* Adjust the color to match the exact color of the header */
     color: white;
 }
 
@@ -333,7 +333,7 @@ body, html {
 
 .login form input[type="submit"] {
     padding: 10px;
-    background-color: #007BFF;
+    background-color: var(--secondary-color);
     color: white;
     border: none;
     border-radius: 5px;
@@ -350,7 +350,7 @@ body, html {
 
 #savedSearches {
     padding: 10px;
-    background-color: #007BFF;
+    background-color: var(--secondary-color);
     color: white;
     border: none;
     border-radius: 5px;
@@ -361,7 +361,7 @@ body, html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #003366;
+    background-color: var(--primary-color);
     color: white;
     padding: 10px 20px;
     width: 100%;
