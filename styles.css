@@ -4,6 +4,10 @@
 
     --white-color: #ffffff;
     --black-color: #000000;
+
+
+    --light-grey: #f7f7f7;
+    --dark-grey: #333;
 }
 
 body, html {
@@ -84,7 +88,7 @@ body, html {
 
 .content {
     font-family: Arial, sans-serif;
-    color: #333;
+    color: var(--dark-grey);
     background-color: #f2f2f2;
     background-image: linear-gradient(180deg, #155DE9 0%, #1E303D 100%);
     align-content: center;
@@ -308,7 +312,7 @@ body, html {
     width: 300px;
     margin: 0 auto;
     padding: 30px;
-    background-color: #f7f7f7;
+    background-color: var(--light-grey);
     border-radius: 10px;
 }
 
