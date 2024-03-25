@@ -1,7 +1,7 @@
 let animorder = 0;
 
 document.addEventListener('DOMContentLoaded', function() {
-    runAnimation();
+    setupObservers();
 });
 
 let elements;
@@ -119,10 +119,12 @@ function setupObservers() {
     });
 
     let navbarObserver = new IntersectionObserver(function(entries, observer) {
-        entries.forEach(entry => {
+        entries.forEach((entry, index) => {
             if(entry.isIntersecting) {
-                entry.target.classList.add('navbar-ani');
-                observer.unobserve(entry.target);
+                setTimeout(function() {
+                    entry.target.classList.add('navbar-ani');
+                    observer.unobserve(entry.target);
+                }, index * 500);
             }
         });
     }, options);
@@ -131,5 +133,5 @@ function setupObservers() {
         navbarObserver.observe(el);
     });
 
-    
+
 }
