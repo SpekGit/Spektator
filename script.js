@@ -51,7 +51,7 @@ function runAnimation() {
             }, {once: true});
             break;
         case 3:
-            elements = document.querySelectorAll('.centred p');
+            elements = document.querySelectorAll('.FAQ p');
             elements.forEach(function(el, index) {
                 setTimeout(function() {
                     el.classList.add('question-anim');
@@ -64,7 +64,7 @@ function runAnimation() {
             }, {once: true});
             break;
         case 4:
-            elements = document.querySelectorAll('.centred h3');
+            elements = document.querySelectorAll('.FAQ h3');
             elements.forEach(function(el, index) {
                 setTimeout(function() {
                     el.classList.add('centred-h3-anim');
@@ -82,7 +82,6 @@ function runAnimation() {
     }
 }
 
-
 document.getElementById('loginForm').addEventListener('submit', function(event) {
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
@@ -99,3 +98,4 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         event.preventDefault(); // Prevent form submission
     }
 });
+
