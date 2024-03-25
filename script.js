@@ -99,3 +99,22 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     }
 });
 
+function setupObservers() {
+    let options = {
+        root: null,
+        threshold: 0.1
+    };
+
+    let bgObserver = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                entry.target.classList.add('bg-ani');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, options);
+
+    document.querySelectorAll('.bg h1, .bg p').forEach(el => {
+        bgObserver.observe(el);
+    });
+}
