@@ -150,4 +150,20 @@ function setupObservers() {
         headerObserver.observe(el);
         coin = !coin;
     });
+
+    let questionObserver = new IntersectionObserver(function(entries, observer) {
+        entries.forEach((entry, index) => {
+            setTimeout(function() {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('question-anim');
+                    observer.unobserve(entry.target);
+                }
+            }, index * 500);
+        });
+    }, options);
+
+    document.querySelectorAll('.FAQ p').forEach(el => {
+        questionObserver.observe(el);
+    });
+
 }
