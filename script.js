@@ -177,5 +177,7 @@ function setupObservers() {
         });
     }, options);
 
-
+    document.querySelectorAll('.FAQ h3').forEach(el => {
+        centredH3Observer.observe(el);
+    });
 }
