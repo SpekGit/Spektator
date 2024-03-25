@@ -133,5 +133,21 @@ function setupObservers() {
         navbarObserver.observe(el);
     });
 
+    let coin = false;
+    let headerObserver = new IntersectionObserver(function(entries, observer) {
+        entries.forEach((entry, index) => {
+            setTimeout(function() {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add(coin ? 'header-ani-left' : 'header-ani-right');
+                    observer.unobserve(entry.target);
+                    coin = !coin;
+                }
+            }, index * 500);
+        });
+    }, options);
 
+    document.querySelectorAll('.content .header h1, .content .header h2, .content .header p').forEach(el => {
+        headerObserver.observe(el);
+        coin = !coin;
+    });
 }
