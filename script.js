@@ -102,7 +102,10 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         alert('Password must be at least 3 characters long.');
         event.preventDefault(); // Prevent form submission
     } else if (username === 'admin' && password === 'admin') {
-        alert('Login successful!');
+        alert('Login successful as admin!');
+        event.preventDefault(); // Prevent form submission
+    }else if (username === 'user' && password === 'user') {
+        alert('Successful login, dear User!');
         event.preventDefault(); // Prevent form submission
     }
 });
