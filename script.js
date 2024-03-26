@@ -14,80 +14,50 @@ document.addEventListener('DOMContentLoaded', function() {
 
 let elements;
 
+const animations = [
+    { selector: '.bg h1, .bg p', animationClass: 'bg-ani' },
+    { selector: '.navbar .navigation a', animationClass: 'navbar-ani' },
+    { selector: '.content .header h1, .content .header h2, .content .header p', animationClass: ['header-ani-right', 'header-ani-left'] },
+    { selector: '.FAQ p', animationClass: 'question-anim' },
+    { selector: '.FAQ h3', animationClass: 'centred-h3-anim' }
+];
+
+let animOrder = 0;
+
+document.addEventListener('DOMContentLoaded', setupObservers);
+
 function runAnimation() {
-    switch (animorder) {
-        case 0:
-            elements = document.querySelectorAll('.bg h1, .bg p');
-            elements.forEach(function(el) {
-                el.classList.add('bg-ani');
-            });
-            document.addEventListener('animationend', function(e) {
-                if (e.target.classList.contains('bg-ani')) {
-                    e.target.classList.remove('bg-ani');
-                }
-                animorder = 1;
-                console.log(animorder);
-                runAnimation();
-            }, {once: true});
-            break;
-        case 1:
-            elements = document.querySelectorAll('.navbar .navigation a');
-            elements.forEach(function(el, index) {
-                setTimeout(function() {
-                    el.classList.add('navbar-ani');
-                }, index * 500); // 500ms interval between each iteration
-            });
-            document.addEventListener('animationend', function(e) {
-                animorder = 2;
-                console.log(animorder);
-                runAnimation();
-            }, {once: true});
-            break;
-        case 2:
-            let coin = false;
-            elements = document.querySelectorAll('.content .header h1, .content .header h2, .content .header p');
-            elements.forEach(function(el, index) {
-                setTimeout(function() {
-                    el.classList.add(coin ? 'header-ani-right' : 'header-ani-left');
-                    coin = !coin;
-                }, index * 500);
-            });
-            document.addEventListener('animationend', function(e) {
-                animorder = 3;
-                console.log(animorder);
-                runAnimation();
-            }, {once: true});
-            break;
-        case 3:
-            elements = document.querySelectorAll('.FAQ p');
-            elements.forEach(function(el, index) {
-                setTimeout(function() {
-                    el.classList.add('question-anim');
-                }, index * 500);
-            });
-            document.addEventListener('animationend', function(e) {
-                animorder = 4;
-                console.log(animorder);
-                runAnimation();
-            }, {once: true});
-            break;
-        case 4:
-            elements = document.querySelectorAll('.FAQ h3');
-            elements.forEach(function(el, index) {
-                setTimeout(function() {
-                    el.classList.add('centred-h3-anim');
-                }, index * 500);
-            });
-            document.addEventListener('animationend', function(e) {
-                animorder = 5;
-                console.log(animorder);
-                runAnimation();
-            }, {once: true});
-            break;
-        default:
-            console.log('Animation completed');
-            break;
+    if (animOrder >= animations.length) {
+        console.log('Animation completed');
+        return;
     }
+
+    const { selector, animationClass } = animations[animOrder];
+    const elements = document.querySelectorAll(selector);
+
+    elements.forEach((el, index) => {
+        setTimeout(() => {
+            if (Array.isArray(animationClass)) {
+                el.classList.add(animationClass[index % 2]);
+            } else {
+                el.classList.add(animationClass);
+            }
+        }, index * 500);
+    });
+
+    document.addEventListener('animationend', (e) => {
+        if (Array.isArray(animationClass)) {
+            if (e.target.classList.contains(animationClass[0]) || e.target.classList.contains(animationClass[1])) {
+                e.target.classList.remove(animationClass[0], animationClass[1]);
+            }
+        } else {
+            if (e.target.classList.contains(animationClass)) {
+                e.target.classList.remove(animationClass);
+            }
+        }
+        animOrder++;
+        runAnimation();
+    }, { once: true });
 }
 
 document.getElementById('loginForm').addEventListener('submit', function(event) {
