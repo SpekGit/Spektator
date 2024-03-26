@@ -1,5 +1,13 @@
 let animorder = 0;
 
+const animations = [
+    { selector: '.bg h1, .bg p', animationClass: 'bg-ani' },
+    { selector: '.navbar .navigation a', animationClass: 'navbar-ani' },
+    { selector: '.content .header h1, .content .header h2, .content .header p', animationClass: ['header-ani-right', 'header-ani-left'] },
+    { selector: '.FAQ p', animationClass: 'question-anim' },
+    { selector: '.FAQ h3', animationClass: 'centred-h3-anim' }
+];
+
 document.addEventListener('DOMContentLoaded', function() {
     setupObservers();
 });
