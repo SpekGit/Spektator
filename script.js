@@ -107,6 +107,9 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     }else if (username === 'user' && password === 'user') {
         alert('Successful login, dear User!');
         event.preventDefault(); // Prevent form submission
+    } else {
+        alert('Invalid username or password.');
+        event.preventDefault(); // Prevent form submission
     }
 });
 
