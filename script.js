@@ -12,20 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
     setupObservers();
 });
 
-let elements;
-
-const animations = [
-    { selector: '.bg h1, .bg p', animationClass: 'bg-ani' },
-    { selector: '.navbar .navigation a', animationClass: 'navbar-ani' },
-    { selector: '.content .header h1, .content .header h2, .content .header p', animationClass: ['header-ani-right', 'header-ani-left'] },
-    { selector: '.FAQ p', animationClass: 'question-anim' },
-    { selector: '.FAQ h3', animationClass: 'centred-h3-anim' }
-];
-
-let animOrder = 0;
-
-document.addEventListener('DOMContentLoaded', setupObservers);
-
 function runAnimation() {
     if (animOrder >= animations.length) {
         console.log('Animation completed');
