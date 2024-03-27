@@ -8,6 +8,7 @@
 
     --light-grey: #f7f7f7;
     --dark-grey: #333;
+    --pink-gradient: linear-gradient(rgb(65, 65, 65) 0%, #a2459a 100%)
 }
 
 body, html {
@@ -195,7 +196,7 @@ body, html {
 .navbar-bottom {
     display: flex;
     justify-content: space-around;
-    background-image: linear-gradient(rgb(65, 65, 65) 0%, #a2459a 100%);
+    background-image: var(--pink-gradient);
     padding: 35px 0;
     color: white;
     font-family: Arial, sans-serif;
@@ -318,8 +319,9 @@ body, html {
     width: 300px;
     margin: 0 auto;
     padding: 30px;
-    background-color: var(--light-grey);
+    background-color: transparent;
     border-radius: 10px;
+    color: var(--white-color);
 }
 
 .login h2 {
@@ -342,16 +344,22 @@ body, html {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
+    background-color: transparent;
 }
 
-.login form input[type="submit"] {
+.login .login-submit {
     padding: 10px;
-    background-color: var(--secondary-color);
+    background-image: linear-gradient(#9d7e9b 0%, #9f3997 100%);
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
+
+.login-submit:hover {
+    background-image: linear-gradient(#9f3997 50%, #9d7e9b 100%);
+}
+
 
 .FAQ{
     display: flex;
